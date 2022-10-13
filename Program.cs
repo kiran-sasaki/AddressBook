@@ -5,7 +5,8 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Address Book Problem");
-            Person.CreatePerson();
+            Person person = new Person();
+            Person.AddPerson();
         }
     }
 }
