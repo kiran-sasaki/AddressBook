@@ -4,7 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Address Book Problrm");
+            Console.WriteLine("Welcome To Address Book Problem");
+            Person.CreatePerson();
         }
     }
 }
