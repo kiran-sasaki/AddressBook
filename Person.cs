@@ -64,6 +64,19 @@ namespace AddressBookProblem
                 }
             }
         }
+        public static void DeleteContact()
+        {
+            Console.Write("enter the name to delete: ");
+            string personName = Console.ReadLine();
+            for (int i = 0; i < contacts.Count; i++)
+            {
+                if (contacts[i].Firstname == personName)
+                {
+                    Console.WriteLine("Record Of {0} Deleted Successfully", contacts[i].Firstname);
+                    contacts.RemoveAt(i);
+                }
+            }
+        }
     }
 }
 
