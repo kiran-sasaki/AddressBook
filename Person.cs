@@ -30,6 +30,40 @@ namespace AddressBookProblem
 
             contacts.Add(contact);
         }
+        public static void listPerson()
+        {
+            foreach (var data in contacts)
+            {
+                Console.WriteLine(data.Firstname);
+                Console.WriteLine(data.Lastname);
+                Console.WriteLine(data.Phonenumber);
+                Console.WriteLine(data.City);
+                Console.WriteLine(data.Zipcode);
+
+            }
+        }
+        public static void EditPerson()
+        {
+            Console.Write("enter the name to edit: ");
+            string editname = Console.ReadLine();
+            foreach (var data in contacts)
+            {
+                if (contacts.Contains(data))
+                {
+                    if (data.Firstname == editname)
+                    {
+                        Console.Write("enter the Phone number: ");
+                        data.Phonenumber = long.Parse(Console.ReadLine());
+
+                        Console.Write("Enter the zipcode: ");
+                        data.Zipcode = int.Parse(Console.ReadLine());
+
+                        Console.Write("Enter the city: ");
+                        data.City = Console.ReadLine();
+                    }
+                }
+            }
+        }
     }
 }
 
