@@ -24,9 +24,9 @@
                 {
                     Person.EditPerson();
                 }
-                if (command == "delete")
+                if(command == "delete")
                 {
-                    Person.DeleteContact();
+                    Person.DeleteContact();                
                 }
             }
         }
