@@ -28,6 +28,10 @@
                 {
                     Person.DeleteContact();                
                 }
+                if(command == "AddMultiplePerson")
+                {
+                    Person.MultipleContacts();
+                }
             }
         }
     }
