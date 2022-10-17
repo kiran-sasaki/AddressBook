@@ -32,6 +32,14 @@
                 {
                     Person.MultipleContacts();
                 }
+                if(command == "UniqueBookName")
+                {
+                    person.NewUser();
+                }
+                if(command == "ViewDictionary")
+                {
+                    person.Display();
+                }
             }
         }
     }
