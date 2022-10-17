@@ -8,6 +8,7 @@ namespace AddressBookProblem
 {
     public class Person
     {
+        Dictionary<string, Contact> dictionary = new Dictionary<string,Contact>();
         public static List<Contact> contacts = new List<Contact>();
         public static void AddPerson()
         {
@@ -85,6 +86,48 @@ namespace AddressBookProblem
             {
                 AddPerson();
                 A--;
+            }
+        }
+        public Dictionary<string, Contact> NewUser()
+        {
+            Console.WriteLine("Enter the Bookname: ");
+            string Bookname = Console.ReadLine();
+
+            Contact contact = new Contact();
+
+            Console.Write("Enter First Name: ");
+            contact.Firstname = Console.ReadLine();
+
+            Console.Write("Enter Last Name: ");
+            contact.Lastname = Console.ReadLine();
+
+            Console.Write("enter the Phone number: ");
+            contact.Phonenumber = long.Parse(Console.ReadLine());
+
+            Console.Write("Enter the city: ");
+            contact.City = Console.ReadLine();
+
+            Console.Write("Enter the zipcode: ");
+            contact.Zipcode = int.Parse(Console.ReadLine());
+
+            contacts.Add(contact);
+            dictionary.Add(Bookname, contact);
+
+            return null;
+        }
+        public void Display()
+        {
+            foreach(KeyValuePair<string, Contact> pair in dictionary)
+            {
+                Console.WriteLine("Address Book Name " + pair.Key);
+                foreach (var kvp in dictionary.Values)
+                {
+                    Console.WriteLine("First Name: " + kvp.Firstname);
+                    Console.WriteLine("Last Name: " + kvp.Lastname);
+                    Console.WriteLine("City : " + kvp.City);
+                    Console.WriteLine("Zip : " + kvp.Zipcode);
+                    Console.WriteLine("Phone Number: " + kvp.Phonenumber);
+                }
             }
         }
     }
