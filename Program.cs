@@ -33,6 +33,9 @@
                     case 7:
                         person.DuplicateContact();
                         break;
+                    case 8:
+                        person.SearchPersonByCityAndState();
+                        break;
                 }
             }
         }
