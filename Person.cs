@@ -148,6 +148,16 @@ namespace AddressBookProblem
             }
             return dictionary;
         }
+        public Dictionary<string, Contact> SearchPersonByCityAndState()
+        {
+            Console.WriteLine("enter the city to search: ");
+            string cityname = Console.ReadLine();
+            foreach (var data in contacts.FindAll(e => e.City == cityname).ToList())
+            {
+                Console.WriteLine("The Contact Details of " + data.City + " are\n:" + data.Firstname + " " + data.Lastname + " " + data.City + " " + data.Zipcode + " " + data.Phonenumber);
+            }
+            return dictionary;
+        }
     }
 }
 
