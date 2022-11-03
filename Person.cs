@@ -130,6 +130,24 @@ namespace AddressBookProblem
                 }
             }
         }
+        public Dictionary<string, Contact> DuplicateContact()
+        {
+            Console.WriteLine("enter the name to check: ");
+            Console.WriteLine("Enter phonenumber");
+            string personName = Console.ReadLine();
+            long phnno = int.Parse(Console.ReadLine());
+            bool check = contacts.Any(e => e.Firstname == personName && e.Phonenumber == phnno);
+            if (check)
+            {
+                Console.WriteLine("contact is present");
+            }
+            else
+            {
+                Console.WriteLine("Contact is not present");
+                NewUser();
+            }
+            return dictionary;
+        }
     }
 }
 
